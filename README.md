@@ -102,11 +102,33 @@ Several of the clearest cases are large patches that meet the fiber at two
 places 80-260 mm apart, on different sheets at each. Per-card verdicts are
 withheld so a human can still label the same cards blind.
 
+## Downstream fit: rejecting flagged pairs did not help (seed 1)
+
+The setup is in `downstream/`, and the protocol (`downstream/PREREG.md`) was written
+before the full-length fits. Each arm is a matched villa spiral fit on z 12500-13500
+(14,780 verified patches, 18 fit fibers), with the same config, seed and 3,000 steps.
+Every fit is scored on 9 held-out fibers that no arm used, with villa's own strip
+satisfaction metric (does the fit keep each held-out fiber on one winding?).
+
+| arm | held-out satisfaction | median error | fit-fiber points linked |
+|---|---:|---:|---:|
+| A native links | 0.433 | 65.5 um | 604 (125 patches) |
+| P patches only | 0.390 | 75.7 um | 0 |
+| D flagged pairs rejected | 0.344 | 82.8 um | 257 (38 patches) |
+
+Removing the pairs D flagged made held-out fibers *less* consistent than keeping
+villa's native links, and less consistent than using no fibers at all. D rejects a
+pair as a whole, including the stretch where the patch does support the fiber, so
+it removes more than half of the fiber constraints. Per-fiber results vary widely,
+so seeds 2 and 3 for A and D are running before any conclusion. This is a bounded
+development fit on a shared GPU, not the production recipe.
+
 ## What this does not show
 
 - Accuracy of any arm as judged by a person: no human labels yet.
 - Review time saved: no timed review yet.
-- A better spiral fit: not run.
+- That the flags improve a fit: the one downstream test so far says they do not,
+  at least when they are used to reject whole pairs.
 - The flags are geometric disagreements between a human-directed fiber trace and
   an automatic patch. Either can be the wrong one; a flag says a reviewer should
   look.

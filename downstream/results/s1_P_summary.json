@@ -1,0 +1,25 @@
+{
+ "status": "completed",
+ "arguments": {
+  "arm": "P",
+  "steps": 3000,
+  "seed": 20260923,
+  "name": "s1_P_3000",
+  "max_seconds": 5400
+ },
+ "manifest_sha256": "4508343253d5fea8627838c264bbdef910494581b2e7ec326e04d091bd501738",
+ "scope": "bounded development fit; not a production recipe",
+ "villa_head": "dce8f83534341697155bf19bcdc1c897cbcccc50",
+ "sample_scaling": [
+  0.10526315789473684,
+  1000,
+  1
+ ],
+ "fiber_attached_points": {},
+ "patches_loaded": 14780,
+ "setup_seconds": 66.06239109998569,
+ "completed_iterations": 3000,
+ "cuda_peak_allocated": 17954891264,
+ "cuda_peak_reserved": 20765999104,
+ "elapsed_seconds": 1266.1299281999818
+}
