@@ -79,9 +79,32 @@ below the 25% retention target set before the run.** D's thresholds were frozen
 before the cal/test runs and have not been retuned on test. Whether D's
 proposals are more often correct than A's links is not known until labels exist.
 
+## A first look at the CT (not human ground truth)
+
+The 64 blinded cards (calibration and test regions; 8 per stratum and region;
+at most 2 pairs per fiber per stratum) were judged by an LLM. That is the
+assistant used to build this repo, working from the card images only, before the
+card key was opened. **This is not a human verdict and does not validate
+accuracy.** It is a development check: do the flags line up with what the CT
+shows? Counts are same sheet / different sheet / can't tell
+(`results/llm_visual_review_v1.json`):
+
+| stratum | same | different | can't tell |
+|---|---:|---:|---:|
+| S1 native link, D proposes | 15 | 0 | 1 |
+| S2 native link, D flags a contradiction | 3 | 12 | 1 |
+| S3 native link, D flags short support only | 9 | 2 | 5 |
+| S4 D proposes, native did not link | 15 | 1 | 0 |
+
+Weighting strata by their real sizes, about a third (calibration) to over half
+(test) of the native (fiber, patch) pairs look like different-sheet placements.
+Several of the clearest cases are large patches that meet the fiber at two
+places 80-260 mm apart, on different sheets at each. Per-card verdicts are
+withheld so a human can still label the same cards blind.
+
 ## What this does not show
 
-- Accuracy of any arm: no human labels yet.
+- Accuracy of any arm as judged by a person: no human labels yet.
 - Review time saved: no timed review yet.
 - A better spiral fit: not run.
 - The flags are geometric disagreements between a human-directed fiber trace and
