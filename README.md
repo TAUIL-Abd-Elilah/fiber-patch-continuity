@@ -151,7 +151,7 @@ are collected, so the blinded cards cannot be matched to decisions.
 
 ## villa change
 
-`spiral-fiber-link-review-filter` (local branch, not yet proposed upstream):
+[ScrollPrize/villa#1874](https://github.com/ScrollPrize/villa/pull/1874) (open):
 `PatchLinkOptions.allowed_patches` / `rejected_patches`. This lets reviewed
 placements constrain a fit. It is off unless passed; the tests cover both link
 backends.
