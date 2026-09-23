@@ -1,0 +1,15 @@
+{
+ "patch_root": "C:/VesuviusProgressData/PHercParis4/verified_patches",
+ "entries": 89237,
+ "indexed": 89237,
+ "errors": [],
+ "num_errors": 0,
+ "listing_sha256": "88483e876386912f8abb063203a7b8e63399d94acc815cbb255df882076b4c9c",
+ "sources": {
+  "": 4225,
+  "vc_grow_seg_from_seed": 694,
+  "copy_displacement_latest": 2,
+  "band grower prototype (crossing-corroborated UV)": 84316
+ },
+ "frame": "PHercParis4 9.6um fit frame, bbox xyz"
+}

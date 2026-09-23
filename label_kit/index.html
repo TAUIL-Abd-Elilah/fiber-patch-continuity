@@ -1,0 +1,430 @@
+<title>Paris4 Sheet Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #eef1ef;
+    --surface: #ffffff;
+    --ink: #17201d;
+    --muted: #5d6a66;
+    --line: #d3dbd8;
+    --accent: #0e7580;
+    --accent-ink: #ffffff;
+    --same: #2f7d3b;
+    --diff: #b3261e;
+    --unsure: #8a6a00;
+    --chip: #e2e8e6;
+    --shadow: 0 1px 2px rgba(23, 32, 29, 0.08);
+    --sans: "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --cond: "IBM Plex Sans Condensed", "Arial Narrow", "IBM Plex Sans", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #111615;
+      --surface: #1a2120;
+      --ink: #e3ebe8;
+      --muted: #97a5a0;
+      --line: #2e3836;
+      --accent: #4fb3bd;
+      --accent-ink: #0b1414;
+      --same: #6cc27a;
+      --diff: #f0776d;
+      --unsure: #d9b64a;
+      --chip: #25302e;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #111615;
+    --surface: #1a2120;
+    --ink: #e3ebe8;
+    --muted: #97a5a0;
+    --line: #2e3836;
+    --accent: #4fb3bd;
+    --accent-ink: #0b1414;
+    --same: #6cc27a;
+    --diff: #f0776d;
+    --unsure: #d9b64a;
+    --chip: #25302e;
+    --shadow: none;
+  }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font: 15px/1.5 var(--sans);
+  }
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-inline: 16px;
+    padding-block: 0 48px;
+  }
+  header.bar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 5;
+    background: var(--ground);
+    border-bottom: 1px solid var(--line);
+    padding-block: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+  }
+  .brand {
+    font: 600 18px/1.2 var(--cond);
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  .brand small {
+    display: block;
+    font: 400 12px/1.3 var(--sans);
+    color: var(--muted);
+    letter-spacing: 0;
+  }
+  .progress {
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: 500 13px/1 var(--mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+  }
+  .track {
+    flex: 1;
+    height: 6px;
+    background: var(--chip);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .track > i {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.25s ease;
+  }
+  .who {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .who input {
+    width: 9ch;
+    font: 500 13px var(--mono);
+    padding: 4px 6px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--surface);
+    color: var(--ink);
+  }
+  details.brief {
+    margin-block: 16px 12px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 10px 14px;
+    box-shadow: var(--shadow);
+  }
+  details.brief summary {
+    cursor: pointer;
+    font: 600 14px var(--cond);
+    letter-spacing: 0.02em;
+  }
+  details.brief p, details.brief li {
+    max-width: 68ch;
+    font-size: 14px;
+  }
+  details.brief ul { padding-left: 18px; margin: 6px 0; }
+  .swatch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    vertical-align: baseline;
+    margin-right: 4px;
+  }
+  .card {
+    display: grid;
+    gap: 12px;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 16px;
+    font: 400 12px var(--mono);
+    color: var(--muted);
+  }
+  .figure {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 6px;
+    min-height: 240px;
+    display: grid;
+    place-items: center;
+  }
+  .figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .question {
+    font: 600 16px/1.35 var(--cond);
+    margin: 4px 0 0;
+    text-wrap: balance;
+  }
+  .choices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .choice {
+    font: 600 15px/1.2 var(--sans);
+    padding: 12px 10px;
+    border-radius: 6px;
+    border: 2px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+  }
+  .choice kbd {
+    font: 500 11px var(--mono);
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0 5px;
+  }
+  .choice[data-v="correct"] { --c: var(--same); }
+  .choice[data-v="wrong"] { --c: var(--diff); }
+  .choice[data-v="unresolved"] { --c: var(--unsure); }
+  .choice:hover { border-color: var(--c); }
+  .choice:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .choice[aria-pressed="true"] {
+    border-color: var(--c);
+    background: color-mix(in srgb, var(--c) 14%, var(--surface));
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .row textarea {
+    flex: 1 1 260px;
+    min-height: 40px;
+    font: 14px var(--sans);
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--ink);
+    resize: vertical;
+  }
+  .nav {
+    font: 500 14px var(--sans);
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .nav.primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+  }
+  .nav:disabled { opacity: 0.45; cursor: default; }
+  .status {
+    font: 400 13px var(--sans);
+    color: var(--muted);
+    min-height: 1.5em;
+  }
+  .status.err { color: var(--diff); }
+  .done {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 16px;
+    max-width: 68ch;
+  }
+  @media (max-width: 560px) {
+    .choices { grid-template-columns: 1fr; }
+    .choice { flex-direction: row; justify-content: space-between; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .track > i { transition: none; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <h1 class="brand">Paris4 Sheet Check<small>PHercParis4 fiber-to-patch placements, blinded</small></h1>
+    <div class="progress" aria-live="polite"><span id="count">0 / 0</span><div class="track"><i id="bar"></i></div></div>
+    <label class="who" for="reviewer">Reviewer <input id="reviewer" maxlength="16" placeholder="initials" autocomplete="off"></label>
+  </header>
+
+  <details class="brief" id="brief" open>
+    <summary>How to judge a card</summary>
+    <p>Each card shows one human-traced fiber and one candidate patch in six CT cross-sections of the PHercParis4 scan (20260411134726, 4.8 um voxels, 720 um across). Every section is cut perpendicular to the fiber at evenly spaced points along the stretch where the patch reaches it; "up" points toward the scroll's centre.</p>
+    <ul>
+      <li><span class="swatch" style="background:#ffd43b"></span>Yellow circle: the fiber in that section.</li>
+      <li><span class="swatch" style="background:#22b8cf"></span>Cyan dots: where the candidate patch cuts the section. A panel without cyan means the patch does not reach that spot; ignore it.</li>
+    </ul>
+    <p><strong>Same sheet</strong>: in every panel with cyan, the cyan follows the papyrus sheet the fiber sits on. <strong>Different sheet</strong>: in at least one panel the cyan follows a neighbouring sheet, or the fiber is not on the sheet the cyan follows. <strong>Can't tell</strong>: the CT does not let you decide. Judge from the image only; the page does not know which answer any method gave. Keys: 1, 2, 3 to answer; arrow keys to move.</p>
+  </details>
+
+  <section class="card" id="card" aria-label="Current card">
+    <div class="meta"><span id="cardid">card</span><span id="saved"></span></div>
+    <div class="figure"><img id="img" alt="Six CT cross-sections of one fiber and one candidate patch" width="892" height="612"></div>
+    <p class="question">Is the cyan patch on the fiber's sheet in every panel where it appears?</p>
+    <div class="choices" role="group" aria-label="Verdict">
+      <button class="choice" id="c-correct" data-v="correct" aria-pressed="false">Same sheet <kbd>1</kbd></button>
+      <button class="choice" id="c-wrong" data-v="wrong" aria-pressed="false">Different sheet <kbd>2</kbd></button>
+      <button class="choice" id="c-unresolved" data-v="unresolved" aria-pressed="false">Can't tell <kbd>3</kbd></button>
+    </div>
+    <div class="row">
+      <textarea id="note" placeholder="Optional note (which panel, what you saw)"></textarea>
+    </div>
+    <div class="row">
+      <button class="nav" id="prev">Previous</button>
+      <button class="nav primary" id="next">Next unanswered</button>
+      <span class="status" id="status"></span>
+    </div>
+  </section>
+
+  <section class="done" id="done" hidden>
+    <h2 class="question">All cards answered</h2>
+    <p>Thank you. Your answers are saved with this page. You can go back to any card and change an answer.</p>
+  </section>
+</div>
+
+<script>
+  const CARDS = ["dbedeb3e2e", "db9610514d", "e3121f6c36", "7b58bd77c8", "0612f4a1e1", "4410b95729", "43d546a6e1", "d1498002f9", "6bc282005f", "d7a933fe3e", "5dd09af851", "bf589ea3c5", "ab537a4c6a", "4b61cab596", "ab80f5f91f", "524881978f", "9deb8ebeea", "f3b17e8984", "0b77c2b696", "7c814b767f", "101e8e3f23", "4c4c378c07", "0f0bcdf247", "13cfef161e", "9fcfe2f449", "fc28c992cd", "1b6ed32475", "651452e1c2", "1c1cb54d5b", "3b9adaac09", "d8cce5fcbb", "209b9c50f5", "9fd082eeb7", "0fe3a4271e", "8278baaede", "9bdf68c2a3", "6ca0c32140", "8623621d96", "ceaaba7237", "5f8c6b45d3", "a42346ea36", "cc16f110c6", "619ecb8211", "688ddaea9a", "344b26e95e", "06710eb047", "c92699b42d", "09875b4ad6", "f7e03c3837", "5972b2cd16", "0ee68cbad0", "c6c6bc5ffd", "50e0db8462", "4c134dd9c9", "aa7d53a200", "483c2256ec", "cc294f6107", "894957a303", "a4b0cc21f4", "b0e07c6cb8", "35889b4661", "acc6805aef", "67abdf79d4", "16e6ebd68e"];
+  const KIT = "paris4-fiber-patch-v1";
+  const $ = (id) => document.getElementById(id);
+  const state = { i: 0, answers: {}, shownAt: 0, active: 0, db: null, viewer: null };
+
+  function store(key, value) {
+    try { if (value === undefined) return localStorage.getItem(key); localStorage.setItem(key, value); } catch (e) { return null; }
+  }
+  $('reviewer').value = store('reviewer') || '';
+  $('reviewer').addEventListener('change', () => store('reviewer', $('reviewer').value.trim()));
+
+  // active-time clock: pauses while the tab is hidden
+  function clockStart() { state.shownAt = performance.now(); }
+  function clockStop() { if (state.shownAt) { state.active += performance.now() - state.shownAt; state.shownAt = 0; } }
+  document.addEventListener('visibilitychange', () => { document.hidden ? clockStop() : clockStart(); });
+
+  function render() {
+    const id = CARDS[state.i];
+    $('img').src = 'cards/' + id + '.jpg';
+    $('cardid').textContent = 'card ' + id + '  (' + (state.i + 1) + ' of ' + CARDS.length + ')';
+    const a = state.answers[id];
+    for (const v of ['correct', 'wrong', 'unresolved']) $('c-' + v).setAttribute('aria-pressed', String(!!a && a.label === v));
+    $('note').value = a ? (a.note || '') : '';
+    $('saved').textContent = a ? 'saved: ' + a.label : '';
+    const n = Object.keys(state.answers).filter((k) => CARDS.includes(k)).length;
+    $('count').textContent = n + ' / ' + CARDS.length;
+    $('bar').style.width = (100 * n / CARDS.length) + '%';
+    $('prev').disabled = state.i === 0;
+    state.active = 0;
+    clockStart();
+  }
+
+  function reviewerKey() {
+    const typed = ($('reviewer').value || '').trim().replace(/[^A-Za-z0-9_-]/g, '').slice(0, 16);
+    return (state.viewer || 'anon') + '_' + (typed || 'x');
+  }
+
+  async function answer(label) {
+    const id = CARDS[state.i];
+    clockStop();
+    const seconds = Math.round(state.active / 100) / 10;
+    const prior = state.answers[id];
+    const rec = {
+      kit: KIT, card_id: id, label, note: $('note').value.trim().slice(0, 1000),
+      seconds_this_visit: seconds,
+      seconds_total: Math.round(((prior && prior.seconds_total) || 0) * 10 + seconds * 10) / 10,
+      reviewer_tag: ($('reviewer').value || '').trim().slice(0, 16),
+      viewer_id: state.viewer, answered_at: new Date().toISOString(), card_index: state.i,
+      revision: ((prior && prior.revision) || 0) + 1,
+    };
+    state.answers[id] = rec;
+    render();
+    $('status').className = 'status';
+    if (!state.db) {
+      $('status').textContent = 'Answer kept in this tab only: saving is unavailable in this view.';
+      store('answers', JSON.stringify(state.answers));
+      return;
+    }
+    $('status').textContent = 'Saving...';
+    try {
+      await state.db.doc('labels/' + KIT + '__' + id + '__' + reviewerKey()).set(rec);
+      $('status').textContent = 'Saved.';
+      store('answers', JSON.stringify(state.answers));
+      setTimeout(next, 250);
+    } catch (e) {
+      $('status').className = 'status err';
+      $('status').textContent = 'Not saved (' + ((e && e.code) || 'error') + '). Your answer is kept here; try again or tell the page owner.';
+    }
+  }
+
+  function next() {
+    const start = state.i;
+    for (let k = 1; k <= CARDS.length; k++) {
+      const j = (start + k) % CARDS.length;
+      if (!state.answers[CARDS[j]]) { state.i = j; $('done').hidden = true; render(); return; }
+    }
+    $('done').hidden = false;
+    if (state.i < CARDS.length - 1) { state.i += 1; render(); }
+  }
+
+  for (const v of ['correct', 'wrong', 'unresolved']) $('c-' + v).addEventListener('click', () => answer(v));
+  $('next').addEventListener('click', () => { clockStop(); next(); });
+  $('prev').addEventListener('click', () => { clockStop(); if (state.i > 0) { state.i -= 1; render(); } });
+  document.addEventListener('keydown', (e) => {
+    if (e.target && (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT')) return;
+    if (e.key === '1') answer('correct');
+    else if (e.key === '2') answer('wrong');
+    else if (e.key === '3') answer('unresolved');
+    else if (e.key === 'ArrowRight') { clockStop(); next(); }
+    else if (e.key === 'ArrowLeft') $('prev').click();
+  });
+
+  try { const cached = JSON.parse(store('answers') || '{}'); if (cached && typeof cached === 'object') state.answers = cached; } catch (e) {}
+  const firstOpen = CARDS.findIndex((id) => !state.answers[id]);
+  state.i = firstOpen >= 0 ? firstOpen : 0;
+  render();
+
+  (async () => {
+    if (!window.claude || !window.claude.use) return;
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
+    if (user) state.viewer = await user.id();
+    if (!db) { $('status').textContent = 'Saving is unavailable in this view; answers stay in this tab.'; return; }
+    state.db = db;
+    try {
+      const snap = await db.collection('labels').where('kit', '==', KIT).where('viewer_id', '==', state.viewer).get();
+      for (const d of snap.docs) {
+        const rec = d.data();
+        if (rec && rec.card_id && (!state.answers[rec.card_id] || state.answers[rec.card_id].answered_at < rec.answered_at)) state.answers[rec.card_id] = rec;
+      }
+      render();
+    } catch (e) { /* resume is a convenience; answering still works */ }
+  })();
+</script>

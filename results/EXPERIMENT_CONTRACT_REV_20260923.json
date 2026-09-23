@@ -1,0 +1,34 @@
+{
+ "revision_of": "_research_september_20260921/EXPERIMENT_CONTRACT.json (version 1, preserved unchanged)",
+ "revision": 2,
+ "written_local": "2026-09-23, before any selection-policy output on calibration or test data",
+ "changes": {
+  "baseline_source_revision": "villa d285029ab6b62bfacf12cdb41bd4653867db73c0 (spiral-fitting identical to a91475ba)",
+  "production_recipe": "villa defaults for linking (tolerance 2.5, window 1/1, side filter off, largest_area, fiber spacing 40, erosion 1). The full spiral-fit production recipe is still unconfirmed.",
+  "new_data": "433 eval fibers published on ash2txt after our 27 Aug cache (dated 22 Aug-15 Sep), downloaded 23 Sep; 369 pass the frame check (declared L0 shape equals the published 20260411134726 zarr's), 64 declare nothing and are excluded.",
+  "split_manifest": "fiber_patch_assoc/splits_20260923.json, sha256 aaa6ea9e7dbde73c8d79a16b859cf2d9867a5f5a6781e118af7bfdcfd840824c: dev 280 (115 previously used + 165 new with majority z<12000), cal 31 (z 12500-14500), test 14 (z 15000-17500), excluded 159 (158 straddle bands, 1 retraces a used fiber). 500-voxel buffers between bands.",
+  "unit_of_decision": "(fiber, patch) pair over the fiber's in-band span; the pair, not the decimated point, is what joins the graph.",
+  "label_protocol": "correct / wrong / unresolved per (fiber, patch) pair from a knowledgeable human using raw CT, blinded to arm and decision; stratified sample of proposed AND review/rejected pairs; unresolved-accepted counted as wrong in the conservative bound.",
+  "label_status": "none available. Dependency: Sean's promised reviewed placement bundle (not posted as of 23 Sep) or another reviewer the user recruits. Without labels the accuracy and review-time gates cannot pass and results stay exploratory.",
+  "development_thresholds_not_calibrated": {
+   "support_tol_voxels": 2.5,
+   "contra_tol_voxels": 6.0,
+   "cover_tol_voxels": 1.0,
+   "dense_spacing_voxels": 8.0,
+   "envelope_voxels": 16.0
+  }
+ },
+ "unchanged_gates": "All engineering gates of version 1 stand (25% retained length per stratum, 2x throughput or 50% time reduction, two regions downstream). None has been changed before viewing results.",
+ "arms": {
+  "A": "native defaults",
+  "B": "native with window gate and/or side filter and/or tighter tolerance, chosen on calibration labels only",
+  "C": "pair-level simple rule: accept pairs with >= L native-linked points and nearest-candidate margin >= m",
+  "D": "pair-level continuity policy: support length, in-domain contradiction, competing covering surfaces, stability"
+ },
+ "amendment_1": {
+  "written": "2026-09-23, before any policy output on cal or test regions",
+  "reason": "No calibration labels exist, so nothing can be tuned on the cal region.",
+  "change": "C and D thresholds stay frozen at the development values in selection.py (D: support_tol 2.5, contra_tol 6.0, cover_tol 1.0, longest support >= 750 um, contradiction < 150 um, stable under the perturbation grid; C: >= 2 links, median distance <= 1.5 vox, non-coincident margin >= 4 vox). The cal (z 12500-14500) and test (z 15000-17500) regions are therefore both untouched evaluation regions. Arm B is reported as the full pre-specified grid (window 3/2, 5/3, side filter, tol 1.5, combined) with no tuning; if labels arrive for cal first, B may be chosen on cal and then only test counts for the final B comparison.",
+  "bug_fixed_before_evaluation": "native_adapter now stamps metadata.logical_input_kind='fiber' as fit_spiral does; without it villa's H/V tagger returned None and the side-filter variant was silently identical to A on the dev band. Dev numbers above were recomputed."
+ }
+}

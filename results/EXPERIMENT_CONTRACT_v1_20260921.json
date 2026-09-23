@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "created_local_date": "2026-09-21",
+  "timezone": "Africa/Casablanca",
+  "status": "design_only_not_a_completed_experiment",
+  "owner": "TAUIL-Abd-Elilah",
+  "hypothesis": "Selective association can improve correct fiber-to-patch constraint yield per human review hour and downstream geometry beyond the current matcher and simple tighter thresholds.",
+  "primary_scroll": "PHercParis4",
+  "primary_scan": "20260411134726",
+  "reference_voxel_size_um": 2.4,
+  "baseline_source_revision": "a91475bade2e166685a56f425f84fde54843d1dc",
+  "optional_direction_model_repository": "scrollprize/lasagna-fiber",
+  "optional_direction_model_revision": "5f08bd48c8943b86df91694da33c712ff3fa95b4",
+  "model_execution_status": "not_downloaded_or_run_for_this_experiment",
+  "production_recipe": null,
+  "independent_test_manifest": null,
+  "calibration_manifest": null,
+  "input_bundle_sha256": null,
+  "reviewer_protocol": null,
+  "actual_geometry_improvement": null,
+  "actual_review_time_improvement": null,
+  "novelty_confirmation": "source_level_screen_completed_maintainer_response_not_verified",
+  "split_group_keys": ["physical_fiber", "connected_patch_family", "spatial_neighborhood", "derivation_lineage"],
+  "exclude_from_final_test": ["all_previously_inspected_or_tuned_Paris4_fibers", "derivatives_of_test_annotations_in_fit_inputs", "overlapping_calibration_regions"],
+  "labels": ["correct", "wrong", "unresolved"],
+  "unresolved_policy": "report_resolved_metrics_and_conservative_bound_counting_accepted_unresolved_as_errors",
+  "arms": [
+    "A_exact_current_maintainer_recipe",
+    "B_calibration_tuned_existing_tolerance_side_window",
+    "C_simple_distance_and_alternative_margin",
+    "D_selective_association_with_complete_evidence_and_stability"
+  ],
+  "matching_metrics": ["precision_coverage_curve", "accepted_physical_span_length", "wrong_sheet_associations", "unresolved_fraction", "correct_accepted_length_per_total_human_hour", "candidate_search_completeness"],
+  "fit_metrics": ["heldout_fiber_error_by_region", "verified_unique_surface_area", "sheet_switches_in_preselected_CT_sections", "control_region_regression", "wall_time", "peak_allocated_VRAM", "peak_host_memory"],
+  "proposed_engineering_gates_not_prize_rules": {
+    "baseline_ready_by": "2026-09-22",
+    "development_improvement_by": "2026-09-23",
+    "minimum_retained_length_fraction_per_required_stratum": 0.25,
+    "review_evaluation_by": "2026-09-25",
+    "target_review_throughput_ratio": 2.0,
+    "target_review_time_reduction_fraction_at_matched_quality": 0.5,
+    "downstream_replication_by": "2026-09-27",
+    "minimum_separate_regions": 2,
+    "initial_target_relative_verified_area_gain_on_hard_region": 0.2,
+    "external_use_by": "2026-09-28"
+  },
+  "deployment_mode": "review_assisted_until_reliability_and_maintainer_requirements_support_less_review",
+  "critical_graph_join_policy": "human_review_every_new_graph_join_in_early_release",
+  "initial_resource_caps_not_measurements": {
+    "system_ram_gib": 16,
+    "allocated_vram_gib": 20,
+    "new_download_gb": 10,
+    "working_cache_gb": 50,
+    "feasibility_gpu_hours": 8,
+    "post_gate_gpu_hours": 40
+  },
+  "stop_conditions": [
+    "duplicating_active_effort_without_a_distinct_agreed_scope",
+    "no_real_runnable_baseline_or_independent_review_labels",
+    "apparent_success_requires_near_zero_retained_coverage",
+    "full_method_does_not_beat_simple_controls",
+    "improved_proxy_metric_but_worse_real_surface"
+  ],
+  "publication": {
+    "only_validated_useful_results": true,
+    "submission_format": "plain_text_txt",
+    "merge_updates_to_same_contribution": true,
+    "target_final_package_date": "2026-09-29",
+    "official_deadline": "2026-09-30T23:59:00-07:00",
+    "utc_deadline": "2026-10-01T06:59:00+00:00"
+  }
+}

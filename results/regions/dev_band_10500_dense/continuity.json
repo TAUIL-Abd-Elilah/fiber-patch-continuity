@@ -1,0 +1,587 @@
+{
+ "summary": {
+  "run": "runs/dev_band_10500_dense",
+  "native_pairs": 82,
+  "native_links": 324,
+  "pairs_contra>=150um": 50,
+  "pairs_connected_contra>=150um": 49,
+  "links_on_connected_contra_pairs": 176,
+  "connected_fraction_of_contra_length": 0.5794815613443235
+ },
+ "pairs": [
+  {
+   "fiber_file": "anon_20260815T015806293_000006.json",
+   "patch": "auto_grown_20260521162121000_sel_20260521_162419_13",
+   "native_links": 1,
+   "contra_um": 7557.0,
+   "connected_contra_um": 480.0
+  },
+  {
+   "fiber_file": "anon_20260815T015806293_000006.json",
+   "patch": "auto_grown_20260525095345801_sel_20260525_103425_32",
+   "native_links": 1,
+   "contra_um": 11869.9,
+   "connected_contra_um": 2781.2
+  },
+  {
+   "fiber_file": "anon_20260815T015806293_000006.json",
+   "patch": "band-seed14907519-20260729-170623-045.tifxyz",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T015806293_000006.json",
+   "patch": "band-seed756414-20260729-222313-313.tifxyz",
+   "native_links": 6,
+   "contra_um": 759.8,
+   "connected_contra_um": 759.8
+  },
+  {
+   "fiber_file": "anon_20260815T020641882_000010.json",
+   "patch": "band-seed15047146-20260729-235041-671.tifxyz",
+   "native_links": 3,
+   "contra_um": 92.2,
+   "connected_contra_um": 92.2
+  },
+  {
+   "fiber_file": "anon_20260815T020641882_000010.json",
+   "patch": "band-seed15573886-20260729-173407-851.tifxyz",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T020641882_000010.json",
+   "patch": "band-seed15895077-20260729-211716-915.tifxyz",
+   "native_links": 5,
+   "contra_um": 671.0,
+   "connected_contra_um": 671.0
+  },
+  {
+   "fiber_file": "anon_20260815T020641882_000010.json",
+   "patch": "fill_0007_sel_20260512_111459_51",
+   "native_links": 1,
+   "contra_um": 1248.0,
+   "connected_contra_um": 1248.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "auto_grown_20260521131254493_sel_20260521_131346_5",
+   "native_links": 17,
+   "contra_um": 383.9,
+   "connected_contra_um": 383.9
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "auto_grown_20260526143735233_sel_20260526_154138_195",
+   "native_links": 14,
+   "contra_um": 671.4,
+   "connected_contra_um": 671.4
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "auto_grown_20260526143735233_sel_20260526_154138_196",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed11302689-20260729-233115-884.tifxyz",
+   "native_links": 8,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed11851033-20260729-233240-590.tifxyz",
+   "native_links": 2,
+   "contra_um": 96.0,
+   "connected_contra_um": 96.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed12996073-20260729-184205-196.tifxyz",
+   "native_links": 1,
+   "contra_um": 96.0,
+   "connected_contra_um": 96.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed504351-20260730-001602-508.tifxyz",
+   "native_links": 1,
+   "contra_um": 383.9,
+   "connected_contra_um": 383.9
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed650026-20260729-180334-624.tifxyz",
+   "native_links": 4,
+   "contra_um": 671.4,
+   "connected_contra_um": 671.4
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed694642-20260729-235937-024.tifxyz",
+   "native_links": 2,
+   "contra_um": 192.0,
+   "connected_contra_um": 192.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "band-seed783317-20260729-181432-366.tifxyz",
+   "native_links": 4,
+   "contra_um": 287.9,
+   "connected_contra_um": 287.9
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "fill_0007_sel_20260512_111459_51",
+   "native_links": 4,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T021049799_000013.json",
+   "patch": "same_wrap003313_lasagna",
+   "native_links": 8,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T021612104_000016.json",
+   "patch": "auto_grown_20260521153551996_sel_20260521_154722_4",
+   "native_links": 4,
+   "contra_um": 6252.0,
+   "connected_contra_um": 479.6
+  },
+  {
+   "fiber_file": "anon_20260815T021612104_000016.json",
+   "patch": "auto_grown_20260521153551996_sel_20260521_154722_5",
+   "native_links": 6,
+   "contra_um": 96.0,
+   "connected_contra_um": 96.0
+  },
+  {
+   "fiber_file": "anon_20260815T022100578_000019.json",
+   "patch": "band-seed13819792-20260729-232304-988.tifxyz",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T022931352_000026.json",
+   "patch": "auto_grown_20260521151954237_sel_20260521_152550_11",
+   "native_links": 1,
+   "contra_um": 960.2,
+   "connected_contra_um": 960.2
+  },
+  {
+   "fiber_file": "anon_20260815T023115025_000027.json",
+   "patch": "auto_grown_20260521151954237_sel_20260521_152550_9",
+   "native_links": 2,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T023115025_000027.json",
+   "patch": "band-seed939880-20260729-221920-839.tifxyz",
+   "native_links": 9,
+   "contra_um": 187.8,
+   "connected_contra_um": 187.8
+  },
+  {
+   "fiber_file": "anon_20260815T023822297_000032.json",
+   "patch": "band-seed699282-20260729-185407-361.tifxyz",
+   "native_links": 3,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T025329229_000042.json",
+   "patch": "auto_grown_20260522195517999_sel_20260522_200240_30",
+   "native_links": 5,
+   "contra_um": 479.6,
+   "connected_contra_um": 479.6
+  },
+  {
+   "fiber_file": "anon_20260815T025329229_000042.json",
+   "patch": "auto_grown_20260522195517999_sel_20260522_200240_31",
+   "native_links": 3,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T030050140_000047.json",
+   "patch": "auto_grown_20260526195309752_sel_20260526_210343_58",
+   "native_links": 11,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T030050140_000047.json",
+   "patch": "band-seed1066535-20260729-173925-947.tifxyz",
+   "native_links": 7,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T030050140_000047.json",
+   "patch": "band-seed903950-20260729-165427-117.tifxyz",
+   "native_links": 31,
+   "contra_um": 95.8,
+   "connected_contra_um": 95.8
+  },
+  {
+   "fiber_file": "anon_20260815T030354517_000049.json",
+   "patch": "band-seed15430932-20260729-233338-363.tifxyz",
+   "native_links": 4,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T030354517_000049.json",
+   "patch": "band-seed16559742-20260730-000600-279.tifxyz",
+   "native_links": 2,
+   "contra_um": 287.7,
+   "connected_contra_um": 287.7
+  },
+  {
+   "fiber_file": "anon_20260815T030354517_000049.json",
+   "patch": "band-seed497934-20260730-000733-348.tifxyz",
+   "native_links": 4,
+   "contra_um": 666.6,
+   "connected_contra_um": 666.6
+  },
+  {
+   "fiber_file": "anon_20260815T030354517_000049.json",
+   "patch": "band-seed684740-20260729-221018-262.tifxyz",
+   "native_links": 1,
+   "contra_um": 192.0,
+   "connected_contra_um": 192.0
+  },
+  {
+   "fiber_file": "anon_20260815T051606895_000055.json",
+   "patch": "band-seed12484559-20260729-163740-328.tifxyz",
+   "native_links": 4,
+   "contra_um": 192.0,
+   "connected_contra_um": 192.0
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "auto_grown_20260521224733336_sel_20260521_225007_9",
+   "native_links": 2,
+   "contra_um": 4736.3,
+   "connected_contra_um": 1200.0
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed10201596-20260729-180246-913.tifxyz",
+   "native_links": 3,
+   "contra_um": 1343.4,
+   "connected_contra_um": 1343.4
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed655832-20260729-170658-355.tifxyz",
+   "native_links": 3,
+   "contra_um": 479.8,
+   "connected_contra_um": 479.8
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed755037-20260730-001305-027.tifxyz",
+   "native_links": 1,
+   "contra_um": 2303.2,
+   "connected_contra_um": 2303.2
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed842669-20260729-194946-756.tifxyz",
+   "native_links": 1,
+   "contra_um": 191.8,
+   "connected_contra_um": 191.8
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed865368-20260729-190633-757.tifxyz",
+   "native_links": 3,
+   "contra_um": 575.7,
+   "connected_contra_um": 575.7
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed902202-20260730-002727-595.tifxyz",
+   "native_links": 8,
+   "contra_um": 384.0,
+   "connected_contra_um": 384.0
+  },
+  {
+   "fiber_file": "anon_20260815T131202278_000059.json",
+   "patch": "band-seed927794-20260729-192356-252.tifxyz",
+   "native_links": 2,
+   "contra_um": 191.9,
+   "connected_contra_um": 191.9
+  },
+  {
+   "fiber_file": "anon_20260815T132038247_000062.json",
+   "patch": "auto_grown_20260526195309752_sel_20260526_210343_90",
+   "native_links": 1,
+   "contra_um": 1871.8,
+   "connected_contra_um": 1871.8
+  },
+  {
+   "fiber_file": "anon_20260815T132038247_000062.json",
+   "patch": "band-seed18128791-20260729-211630-322.tifxyz",
+   "native_links": 1,
+   "contra_um": 1726.8,
+   "connected_contra_um": 1726.8
+  },
+  {
+   "fiber_file": "anon_20260815T132428555_000064.json",
+   "patch": "band-seed703826-20260729-165834-182.tifxyz",
+   "native_links": 4,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T132428555_000064.json",
+   "patch": "band-seed842659-20260729-201842-840.tifxyz",
+   "native_links": 5,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T133724240_000070.json",
+   "patch": "auto_grown_20260521190621512_sel_20260521_190859_17",
+   "native_links": 25,
+   "contra_um": 6018.1,
+   "connected_contra_um": 1425.7
+  },
+  {
+   "fiber_file": "anon_20260815T133724240_000070.json",
+   "patch": "band-seed10123125-20260729-221721-222.tifxyz",
+   "native_links": 1,
+   "contra_um": 767.7,
+   "connected_contra_um": 767.7
+  },
+  {
+   "fiber_file": "anon_20260815T133724240_000070.json",
+   "patch": "band-seed15853724-20260729-224951-981.tifxyz",
+   "native_links": 2,
+   "contra_um": 94.1,
+   "connected_contra_um": 94.1
+  },
+  {
+   "fiber_file": "anon_20260815T133724240_000070.json",
+   "patch": "band-seed321599-20260729-232418-976.tifxyz",
+   "native_links": 4,
+   "contra_um": 94.1,
+   "connected_contra_um": 94.1
+  },
+  {
+   "fiber_file": "anon_20260815T133724240_000070.json",
+   "patch": "band-seed575560-20260729-193719-011.tifxyz",
+   "native_links": 4,
+   "contra_um": 767.7,
+   "connected_contra_um": 767.7
+  },
+  {
+   "fiber_file": "anon_20260815T135437957_000076.json",
+   "patch": "auto_grown_20260527055752931_sel_20260527_060635_78",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T135437957_000076.json",
+   "patch": "band-seed420221-20260729-200403-528.tifxyz",
+   "native_links": 5,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T135437957_000076.json",
+   "patch": "band-seed448062-20260729-222124-745.tifxyz",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T135437957_000076.json",
+   "patch": "band-seed472557-20260729-210242-680.tifxyz",
+   "native_links": 4,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T144206547_000082.json",
+   "patch": "auto_grown_20260521224348911_sel_20260521_224659_15",
+   "native_links": 1,
+   "contra_um": 2198.7,
+   "connected_contra_um": 2198.7
+  },
+  {
+   "fiber_file": "anon_20260815T145844245_000088.json",
+   "patch": "auto_grown_20260521161559989_sel_20260521_162020_14",
+   "native_links": 2,
+   "contra_um": 3253.3,
+   "connected_contra_um": 2773.3
+  },
+  {
+   "fiber_file": "anon_20260815T151658057_000094.json",
+   "patch": "auto_grown_20260521153551996_sel_20260521_154722_4",
+   "native_links": 2,
+   "contra_um": 6214.7,
+   "connected_contra_um": 1342.6
+  },
+  {
+   "fiber_file": "anon_20260815T151658057_000094.json",
+   "patch": "auto_grown_20260521161130783_sel_20260521_161535_29",
+   "native_links": 3,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T151658057_000094.json",
+   "patch": "auto_grown_20260521225553961_sel_20260521_225725_5",
+   "native_links": 2,
+   "contra_um": 1698.1,
+   "connected_contra_um": 1698.1
+  },
+  {
+   "fiber_file": "anon_20260815T151658057_000094.json",
+   "patch": "auto_grown_20260525071235545_sel_20260525_072130_14",
+   "native_links": 11,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260815T154231827_000098.json",
+   "patch": "auto_grown_20260525093749704_sel_20260525_094056_14",
+   "native_links": 1,
+   "contra_um": 0.0,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260816T205458749_000115.json",
+   "patch": "band-seed650026-20260729-180334-624.tifxyz",
+   "native_links": 1,
+   "contra_um": 662.8,
+   "connected_contra_um": 0.0
+  },
+  {
+   "fiber_file": "anon_20260816T205458749_000115.json",
+   "patch": "band-seed843901-20260729-170711-149.tifxyz",
+   "native_links": 1,
+   "contra_um": 479.7,
+   "connected_contra_um": 479.7
+  },
+  {
+   "fiber_file": "anon_20260816T205458749_000115.json",
+   "patch": "band-seed941714-20260729-222740-279.tifxyz",
+   "native_links": 2,
+   "contra_um": 96.0,
+   "connected_contra_um": 96.0
+  },
+  {
+   "fiber_file": "anon_20260816T205458749_000115.json",
+   "patch": "fill_0010_sel_20260512_111940_20",
+   "native_links": 2,
+   "contra_um": 4094.4,
+   "connected_contra_um": 3998.4
+  },
+  {
+   "fiber_file": "anon_20260816T210552967_000117.json",
+   "patch": "band-seed15306940-20260729-183107-234.tifxyz",
+   "native_links": 3,
+   "contra_um": 375.4,
+   "connected_contra_um": 279.6
+  },
+  {
+   "fiber_file": "anon_20260816T210552967_000117.json",
+   "patch": "band-seed437275-20260729-201956-658.tifxyz",
+   "native_links": 4,
+   "contra_um": 187.4,
+   "connected_contra_um": 187.4
+  },
+  {
+   "fiber_file": "anon_20260816T210552967_000117.json",
+   "patch": "band-seed888888-20260729-164304-249.tifxyz",
+   "native_links": 1,
+   "contra_um": 959.7,
+   "connected_contra_um": 959.7
+  },
+  {
+   "fiber_file": "anon_20260816T222616959_000118.json",
+   "patch": "auto_grown_20260521133909764_sel_20260521_133956_1",
+   "native_links": 4,
+   "contra_um": 1136.7,
+   "connected_contra_um": 1136.7
+  },
+  {
+   "fiber_file": "anon_20260816T222616959_000118.json",
+   "patch": "auto_grown_20260526143735233_sel_20260526_154138_136",
+   "native_links": 5,
+   "contra_um": 2862.4,
+   "connected_contra_um": 2862.4
+  },
+  {
+   "fiber_file": "anon_20260816T223733888_000120.json",
+   "patch": "auto_grown_20260524234107901_sel_20260524_234338_3",
+   "native_links": 3,
+   "contra_um": 767.5,
+   "connected_contra_um": 767.5
+  },
+  {
+   "fiber_file": "anon_20260817T015556811_000126.json",
+   "patch": "auto_grown_20260525093749704_sel_20260525_094056_8",
+   "native_links": 6,
+   "contra_um": 96.0,
+   "connected_contra_um": 96.0
+  },
+  {
+   "fiber_file": "anon_20260817T015948930_000127.json",
+   "patch": "auto_grown_20260522201924143_sel_20260522_202210_13",
+   "native_links": 1,
+   "contra_um": 96.0,
+   "connected_contra_um": 96.0
+  },
+  {
+   "fiber_file": "anon_20260817T015948930_000127.json",
+   "patch": "band-seed773852-20260729-231649-150.tifxyz",
+   "native_links": 1,
+   "contra_um": 1536.0,
+   "connected_contra_um": 1536.0
+  },
+  {
+   "fiber_file": "anon_20260817T015948930_000127.json",
+   "patch": "band-seed800610-20260729-235059-140.tifxyz",
+   "native_links": 1,
+   "contra_um": 1344.0,
+   "connected_contra_um": 1344.0
+  },
+  {
+   "fiber_file": "anon_20260817T015948930_000127.json",
+   "patch": "band-seed958762-20260729-172908-643.tifxyz",
+   "native_links": 1,
+   "contra_um": 383.9,
+   "connected_contra_um": 383.9
+  },
+  {
+   "fiber_file": "anon_20260817T024309713_000131.json",
+   "patch": "auto_grown_20260521151954237_sel_20260521_152550_9",
+   "native_links": 1,
+   "contra_um": 934.9,
+   "connected_contra_um": 934.9
+  },
+  {
+   "fiber_file": "anon_20260817T024309713_000131.json",
+   "patch": "auto_grown_20260521161130783_sel_20260521_161535_9",
+   "native_links": 1,
+   "contra_um": 1897.1,
+   "connected_contra_um": 1897.1
+  }
+ ]
+}

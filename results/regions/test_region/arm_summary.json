@@ -1,0 +1,78 @@
+{
+ "run": "runs/test_region",
+ "pairs": 1241,
+ "arms": {
+  "A": {
+   "accepted_pairs": 347,
+   "accepted_native_links": 2338,
+   "fibers_with_accepted_pair": 14,
+   "unique_supported_fiber_mm": 877.2,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 256,
+   "accepted_pairs_short_support<750um": 122
+  },
+  "B_side": {
+   "accepted_pairs": 371,
+   "accepted_native_links": 2246,
+   "fibers_with_accepted_pair": 14,
+   "unique_supported_fiber_mm": 873.0,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 280,
+   "accepted_pairs_short_support<750um": 120
+  },
+  "B_tol1.5": {
+   "accepted_pairs": 325,
+   "accepted_native_links": 2194,
+   "fibers_with_accepted_pair": 14,
+   "unique_supported_fiber_mm": 867.2,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 235,
+   "accepted_pairs_short_support<750um": 92
+  },
+  "B_win3_2": {
+   "accepted_pairs": 276,
+   "accepted_native_links": 2228,
+   "fibers_with_accepted_pair": 13,
+   "unique_supported_fiber_mm": 850.2,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 205,
+   "accepted_pairs_short_support<750um": 71
+  },
+  "B_win5_3": {
+   "accepted_pairs": 262,
+   "accepted_native_links": 2188,
+   "fibers_with_accepted_pair": 13,
+   "unique_supported_fiber_mm": 844.2,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 196,
+   "accepted_pairs_short_support<750um": 58
+  },
+  "B_win5_3_side_tol2": {
+   "accepted_pairs": 174,
+   "accepted_native_links": 1772,
+   "fibers_with_accepted_pair": 12,
+   "unique_supported_fiber_mm": 732.6,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 139,
+   "accepted_pairs_short_support<750um": 23
+  },
+  "C": {
+   "accepted_pairs": 79,
+   "accepted_native_links": 1626,
+   "fibers_with_accepted_pair": 13,
+   "unique_supported_fiber_mm": 685.6,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 41,
+   "accepted_pairs_short_support<750um": 24
+  },
+  "D": {
+   "accepted_pairs": 64,
+   "accepted_native_links": 84,
+   "fibers_with_accepted_pair": 12,
+   "unique_supported_fiber_mm": 93.9,
+   "fiber_in_region_mm": 1894.2,
+   "accepted_pairs_with_contradiction>=150um": 0,
+   "accepted_pairs_short_support<750um": 0
+  }
+ }
+}

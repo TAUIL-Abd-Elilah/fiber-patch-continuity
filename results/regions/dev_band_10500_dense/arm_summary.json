@@ -1,0 +1,78 @@
+{
+ "run": "runs/dev_band_10500_dense",
+ "pairs": 211,
+ "arms": {
+  "A": {
+   "accepted_pairs": 82,
+   "accepted_native_links": 324,
+   "fibers_with_accepted_pair": 28,
+   "unique_supported_fiber_mm": 117.9,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 50,
+   "accepted_pairs_short_support<750um": 45
+  },
+  "B_side": {
+   "accepted_pairs": 78,
+   "accepted_native_links": 298,
+   "fibers_with_accepted_pair": 27,
+   "unique_supported_fiber_mm": 110.6,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 44,
+   "accepted_pairs_short_support<750um": 42
+  },
+  "B_tol1.5": {
+   "accepted_pairs": 75,
+   "accepted_native_links": 306,
+   "fibers_with_accepted_pair": 25,
+   "unique_supported_fiber_mm": 115.6,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 43,
+   "accepted_pairs_short_support<750um": 37
+  },
+  "B_win3_2": {
+   "accepted_pairs": 52,
+   "accepted_native_links": 279,
+   "fibers_with_accepted_pair": 21,
+   "unique_supported_fiber_mm": 103.3,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 28,
+   "accepted_pairs_short_support<750um": 16
+  },
+  "B_win5_3": {
+   "accepted_pairs": 42,
+   "accepted_native_links": 257,
+   "fibers_with_accepted_pair": 17,
+   "unique_supported_fiber_mm": 95.8,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 21,
+   "accepted_pairs_short_support<750um": 10
+  },
+  "B_win5_3_side_tol2": {
+   "accepted_pairs": 23,
+   "accepted_native_links": 144,
+   "fibers_with_accepted_pair": 12,
+   "unique_supported_fiber_mm": 64.8,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 12,
+   "accepted_pairs_short_support<750um": 4
+  },
+  "C": {
+   "accepted_pairs": 33,
+   "accepted_native_links": 189,
+   "fibers_with_accepted_pair": 17,
+   "unique_supported_fiber_mm": 80.1,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 21,
+   "accepted_pairs_short_support<750um": 13
+  },
+  "D": {
+   "accepted_pairs": 20,
+   "accepted_native_links": 43,
+   "fibers_with_accepted_pair": 7,
+   "unique_supported_fiber_mm": 33.0,
+   "fiber_in_region_mm": 741.7,
+   "accepted_pairs_with_contradiction>=150um": 0,
+   "accepted_pairs_short_support<750um": 0
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "summary": {
+  "run": "runs/cal_region",
+  "native_pairs": 280,
+  "native_links": 1179,
+  "pairs_contra>=150um": 81,
+  "pairs_connected_contra>=150um": 75,
+  "links_on_connected_contra_pairs": 340,
+  "connected_fraction_of_contra_length": 0.5226190766674237
+ }
+}
