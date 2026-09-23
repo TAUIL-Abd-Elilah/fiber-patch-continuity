@@ -117,6 +117,10 @@ public zarr (level 1, 4.8 um) chunk by chunk with a disk cache.
 - `selection.py`: pair records (schema `fiber-patch-assoc/0.1`) and the arms. `evaluate.py`: arm summaries, and precision with bounds once labels exist.
 - `review_export.py`, `render_cases.py`, `ct.py`: CT review cards.
 - `blind_cards.py`, `build_label_page.py`, `label_page_template.html`: blinded labeling kit.
+  `label_kit/` holds the 64 v1 cards (calibration and test regions, four strata, shuffled).
+  Its `index.html` also works from a local copy, but there answers stay in your browser;
+  ask the author for the hosted copy, which saves them. The card-to-pair key is withheld
+  until labeling ends.
 - `results/`: replay reports, arm and continuity summaries, split manifest, dated protocol.
 
 Per-pair decisions for the cal and test regions are withheld until their labels
