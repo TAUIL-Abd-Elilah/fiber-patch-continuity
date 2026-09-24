@@ -1,0 +1,96 @@
+{
+ "run": "s3_D_3000",
+ "arm": "D",
+ "seed": 20260926,
+ "steps": 3000,
+ "z": [
+  12500,
+  13500
+ ],
+ "eval_fibers_evaluated": 9,
+ "eval_points": 683,
+ "point_weighted_satisfaction": 0.3938506588579795,
+ "fiber_mean_satisfaction": 0.3902659609691718,
+ "fully_satisfied_fibers": 0,
+ "median_error_um": 73.74368286132812,
+ "metric_config": {
+  "satisfaction_radius_tolerance": 0.45,
+  "satisfaction_distance_tolerance": 6.0,
+  "satisfied_patch_quad_fraction": 0.95,
+  "boundary_satisfied_patch_quad_fraction": 0.9
+ },
+ "per_fiber": [
+  {
+   "fiber": "anon_20260831T034724672_000294.json",
+   "points": 19,
+   "satisfied": 4,
+   "fraction": 0.21052631578947367,
+   "median_error_um": 149.9379119873047,
+   "p90_error_um": 294.89892578125
+  },
+  {
+   "fiber": "anon_20260901T153121560_000308.json",
+   "points": 87,
+   "satisfied": 41,
+   "fraction": 0.47126436781609193,
+   "median_error_um": 58.87017822265625,
+   "p90_error_um": 281.0590515136719
+  },
+  {
+   "fiber": "anon_20260901T175934744_000324.json",
+   "points": 18,
+   "satisfied": 3,
+   "fraction": 0.16666666666666666,
+   "median_error_um": 81.85118103027344,
+   "p90_error_um": 123.13179779052734
+  },
+  {
+   "fiber": "anon_20260901T214525268_000340.json",
+   "points": 107,
+   "satisfied": 46,
+   "fraction": 0.42990654205607476,
+   "median_error_um": 64.41645812988281,
+   "p90_error_um": 456.1036071777344
+  },
+  {
+   "fiber": "anon_20260904T032504944_000405.json",
+   "points": 74,
+   "satisfied": 35,
+   "fraction": 0.47297297297297297,
+   "median_error_um": 59.793296813964844,
+   "p90_error_um": 142.65615844726562
+  },
+  {
+   "fiber": "anon_20260904T100845093_000411.json",
+   "points": 9,
+   "satisfied": 6,
+   "fraction": 0.6666666666666666,
+   "median_error_um": 33.8631477355957,
+   "p90_error_um": 76.02626037597656
+  },
+  {
+   "fiber": "anon_20260906T014123382_000481.json",
+   "points": 97,
+   "satisfied": 37,
+   "fraction": 0.38144329896907214,
+   "median_error_um": 74.60469055175781,
+   "p90_error_um": 365.5244445800781
+  },
+  {
+   "fiber": "anon_20260911T164115761_000582.json",
+   "points": 148,
+   "satisfied": 53,
+   "fraction": 0.3581081081081081,
+   "median_error_um": 75.68207550048828,
+   "p90_error_um": 205.54893493652344
+  },
+  {
+   "fiber": "anon_20260914T140027578_000588.json",
+   "points": 124,
+   "satisfied": 44,
+   "fraction": 0.3548387096774194,
+   "median_error_um": 96.73359680175781,
+   "p90_error_um": 819.6643676757812
+  }
+ ]
+}

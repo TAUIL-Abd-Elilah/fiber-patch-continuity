@@ -102,33 +102,38 @@ Several of the clearest cases are large patches that meet the fiber at two
 places 80-260 mm apart, on different sheets at each. Per-card verdicts are
 withheld so a human can still label the same cards blind.
 
-## Downstream fit: rejecting flagged pairs did not help (seed 1)
+## Downstream fit: rejecting flagged pairs made the fit worse
 
 The setup is in `downstream/`, and the protocol (`downstream/PREREG.md`) was written
 before the full-length fits. Each arm is a matched villa spiral fit on z 12500-13500
-(14,780 verified patches, 18 fit fibers), with the same config, seed and 3,000 steps.
+(14,780 verified patches, 18 fit fibers), with the same config and 3,000 steps.
 Every fit is scored on 9 held-out fibers that no arm used, with villa's own strip
 satisfaction metric (does the fit keep each held-out fiber on one winding?).
 
-| arm | held-out satisfaction | median error | fit-fiber points linked |
-|---|---:|---:|---:|
-| A native links | 0.433 | 65.5 um | 604 (125 patches) |
-| P patches only | 0.390 | 75.7 um | 0 |
-| D flagged pairs rejected | 0.344 | 82.8 um | 257 (38 patches) |
+| arm | seed 1 | seed 2 | seed 3 | mean (sd) | fit-fiber points linked |
+|---|---:|---:|---:|---:|---:|
+| A native links | 0.433 | 0.384 | 0.425 | 0.414 (0.027) | 604 (125 patches) |
+| D flagged pairs rejected | 0.344 | 0.351 | 0.394 | 0.363 (0.027) | 257 (38 patches) |
+| P patches only | 0.390 | | | | 0 |
 
-Removing the pairs D flagged made held-out fibers *less* consistent than keeping
-villa's native links, and less consistent than using no fibers at all. D rejects a
-pair as a whole, including the stretch where the patch does support the fiber, so
-it removes more than half of the fiber constraints. Per-fiber results vary widely,
-so seeds 2 and 3 for A and D are running before any conclusion. This is a bounded
-development fit on a shared GPU, not the production recipe.
+D is below A in all three paired seeds (by 0.089, 0.032 and 0.031). Rejecting
+the pairs D flags removes more than half of the fiber constraints, including the
+stretches where a flagged patch does support the fiber. The fit loses more from
+that than it gains from dropping the doubtful parts. Most of the loss comes from a
+few held-out fibers; one drops from 0.54 to 0.17 and three are unchanged
+(`downstream/results/comparison_seeds1-3.json`).
+
+So the flags are not a filter that improves fits. Their use is as a review list,
+pointing a person at the placements worth looking at. This is a bounded
+development fit on a shared GPU, not the production recipe, with 9 held-out
+fibers in one region.
 
 ## What this does not show
 
 - Accuracy of any arm as judged by a person: no human labels yet.
 - Review time saved: no timed review yet.
-- That the flags improve a fit: the one downstream test so far says they do not,
-  at least when they are used to reject whole pairs.
+- That the flags improve a fit: the downstream test (3 seeds) says rejecting flagged
+  pairs makes it worse.
 - The flags are geometric disagreements between a human-directed fiber trace and
   an automatic patch. Either can be the wrong one; a flag says a reviewer should
   look.
