@@ -102,7 +102,7 @@ Several of the clearest cases are large patches that meet the fiber at two
 places 80-260 mm apart, on different sheets at each. Per-card verdicts are
 withheld so a human can still label the same cards blind.
 
-## Downstream fit: rejecting flagged pairs made the fit worse
+## Downstream fit: using the flags as a filter made the fit worse
 
 The setup is in `downstream/`, and the protocol (`downstream/PREREG.md`) was written
 before the full-length fits. Each arm is a matched villa spiral fit on z 12500-13500
@@ -114,6 +114,7 @@ satisfaction metric (does the fit keep each held-out fiber on one winding?).
 |---|---:|---:|---:|---:|---:|
 | A native links | 0.433 | 0.384 | 0.425 | 0.414 (0.027) | 604 (125 patches) |
 | D flagged pairs rejected | 0.344 | 0.351 | 0.394 | 0.363 (0.027) | 257 (38 patches) |
+| F contradicted patches removed | 0.422 | 0.388 | 0.400 | 0.403 (0.017) | 565 |
 | P patches only | 0.390 | | | | 0 |
 
 D is below A in all three paired seeds (by 0.089, 0.032 and 0.031). Rejecting
@@ -122,6 +123,14 @@ stretches where a flagged patch does support the fiber. The fit loses more from
 that than it gains from dropping the doubtful parts. Most of the loss comes from a
 few held-out fibers; one drops from 0.54 to 0.17 and three are unchanged
 (`downstream/results/comparison_seeds1-3.json`).
+
+After D failed, a second rule, F, was fixed before running it (`downstream/PREREG_F.md`).
+F removes the 34 patches that a fit fiber contradicts, and keeps the native links
+to every other patch. The idea: the patch, not the link, is what sits a sheet
+off. F beat A in only 1 of 3 seeds and lost by 0.011 on average, below the bar
+set in advance (2 of 3 seeds and a gain above 0.027), so the fit line stops here.
+The same held-out fiber collapses in D and F (0.54 to 0.17): some of the
+"contradicted" patches evidently help the fit near it.
 
 So the flags are not a filter that improves fits. Their use is as a review list,
 pointing a person at the placements worth looking at. This is a bounded
@@ -132,8 +141,8 @@ fibers in one region.
 
 - Accuracy of any arm as judged by a person: no human labels yet.
 - Review time saved: no timed review yet.
-- That the flags improve a fit: the downstream test (3 seeds) says rejecting flagged
-  pairs makes it worse.
+- That the flags improve a fit: in the downstream test (3 seeds each), neither
+  rejecting flagged pairs nor removing contradicted patches helped.
 - The flags are geometric disagreements between a human-directed fiber trace and
   an automatic patch. Either can be the wrong one; a flag says a reviewer should
   look.

@@ -33,7 +33,7 @@ def write_json(path, value):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--arm', choices=['P', 'A', 'D'], required=True)
+    p.add_argument('--arm', choices=['P', 'A', 'D', 'F'], required=True)
     p.add_argument('--steps', type=int, required=True)
     p.add_argument('--seed', type=int, default=20260923)
     p.add_argument('--name', required=True)
@@ -69,7 +69,7 @@ def main():
         for key in config:
             if key.startswith('input_use_'):
                 config[key] = key == 'input_use_verified_patches' or (
-                    key == 'input_use_fibers' and args.arm in ('A', 'D'))
+                    key == 'input_use_fibers' and args.arm in ('A', 'D', 'F'))
         for key in ('loss_weight_dense_normals', 'loss_weight_fiber_directions',
                     'loss_weight_dense_spacing', 'loss_weight_dense_spacing_density',
                     'loss_weight_shell_outer', 'loss_weight_shell_patch_radius'):
@@ -79,6 +79,12 @@ def main():
                 'sample_count_unattached_pcls_per_step', 'sample_count_regularisation_points',
                 'sample_count_dense_attachment_points')
         summary['sample_scaling'] = scale_and_split_counts(config, int(z0), int(z1), keys, world_size=1)
+        if args.arm == 'F':
+            # PREREG_F.md: drop the patches a fit fiber contradicts, via villa's own filter.
+            import re
+            removed = json.loads((HERE / 'F_removed_patches.json').read_text())
+            config['patch_uuid_filter_regex'] = '^(?!(?:' + '|'.join(re.escape(n) for n in removed) + ')$)'
+            summary['F_removed_patch_count'] = len(removed)
         write_json(out / 'resolved_config.json', config)
         dataset = HERE / 'dataset'
         scroll = load_scroll_spec(dataset)
